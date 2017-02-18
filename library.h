@@ -10,12 +10,12 @@ struct Transaction {
 
 typedef struct Transaction Transaction;
 
-struct Record {
+typedef struct Record {
 	int id;
 	char* name;
 	float balance;
 	Transaction** transaction; 
-};
+} Record;
 
 Transaction* getTransaction(int id);
 
