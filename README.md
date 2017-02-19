@@ -24,3 +24,32 @@ We write our code in *.c files.  To turn these *.c files into code the computer 
 	- If our code is compilable it will be turned into object files (*.o).
 	- The linker links the object files together either statically or dynamically and produces an executable.
 
+We can view this process more closely by asking the compiler to create the object files but skip the linking phase.
+
+### Exercise
+
+At this point you should have cloned this project.  Navigate into the project directory and do the following:
+
+```
+clang -c library.c
+```
+
+The ```-c``` flag tells the compiler to compile only; no linking is performed.  You should now have a ```library.o``` file in your directory.  This is the compiled object file for the code from ```library.c```.  Similarly, execute the following command:
+
+```
+clang -c banking.c
+```
+
+You should now have a ```banking.o``` object file for the banking.c code.  Both files of *.c code have now been compiled.  Each file was compiled without the other files code, yet the compiler could tell us of any errors in usage due to the fact that we included the header (*.h) file.
+
+Now, we can complete the process.  If we run the command
+
+```
+clang -o banking_app banking.o library.o
+```
+
+an executable will be created by linking the object files.  This executable, called ```banking_app``` may be run with the command
+
+```
+./banking_app
+```
