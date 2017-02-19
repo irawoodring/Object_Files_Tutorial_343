@@ -18,9 +18,9 @@ The process of including other code libraries into our own code is called "linki
 
 We write our code in *.c files.  To turn these *.c files into code the computer can execute we compile our code.  The process of compilation is sometimes confusing for students, because we usually see an input phase of a file or files and an output of a single executable.  What gets lost in this process is the linking.  We tend to think of the compilation process as the process which creates the executable, but this isn't really the case.  What really happens is more like this:
 
-	- The compiler compiles each of our *.c files separately
-		- This means that the compiler needs to know if we are using a function or data type correctly so it can warn us of any problems.
-		- *.h files (header files) tell the compiler about function descriptions, data structures, etc. that are not defined in our current *.c file.  This gives the compiler the chance to check our syntax and ensure we are using these entities correctly. 
-		- If our code is compilable it will be turned into object files (*.o).
-		- The linker links the object files together either statically or dynamically and produces an executable.
- 
+- The compiler compiles each of our *.c files separately
+	- This means that the compiler needs to know if we are using a function or data type correctly so it can warn us of any problems.
+	- *.h files (header files) tell the compiler about function descriptions, data structures, etc. that are not defined in our current *.c file.  This gives the compiler the chance to check our syntax and ensure we are using these entities correctly. 
+	- If our code is compilable it will be turned into object files (*.o).
+	- The linker links the object files together either statically or dynamically and produces an executable.
+
